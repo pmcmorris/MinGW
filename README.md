@@ -40,10 +40,11 @@ References to specific snapshots in this repository can then be used in repeatab
 
     Edit the install location in the %MSYS_DIR%/etc/fstab file:
     ```dos
-    C:\users\me\where_ever_you_cloned_it   /mingw
+    C:/users/me/where_ever_you_cloned_it   /mingw
     ```
+    Note the forward slashes.
     
-    TODO: Write a script to make this edit and add the fstab to the local .gitignore
+    TODO: Write a script to make this edit to the fstab automatically.
 
 # Miscellaneous
 
