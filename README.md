@@ -18,32 +18,32 @@ References to specific snapshots in this repository can then be used in repeatab
 
 1. Clone the repository using git
 
-```dos
-git clone https://github.com/pmcmorris/MinGW.git
-```
-
-Avoid locations which include spaces in the path (MinGW may not like that)
+    ```dos
+    git clone https://github.com/pmcmorris/MinGW.git
+    ```
+    
+    Avoid locations which include spaces in the path (MinGW may not like that)
       
 2. Add the binary folders to your path
 
-```dos
-set MINGW_DIR=C:\users\me\where_ever_you_cloned_it
-set MSYS_DIR=%MINGW_DIR%\msys\1.0
-set PATH=%MINGW_DIR%\bin;%MSYS_DIR%\local\bin;%MSYS_DIR%\bin;%PATH%
-```
-
-If you're doing repeatable builds, you probably don't want to update system or user environment variables and should stick to per process settings.
-
-The MinGW documentation is more cautious and suggests appending instead of prepending for compatibility. Prepending here is used to intentionally override any existing tools of the same name that may have come from other sources (e.g. Cmder, GitForWindows, etc.).
+    ```dos
+    set MINGW_DIR=C:\users\me\where_ever_you_cloned_it
+    set MSYS_DIR=%MINGW_DIR%\msys\1.0
+    set PATH=%MINGW_DIR%\bin;%MSYS_DIR%\local\bin;%MSYS_DIR%\bin;%PATH%
+    ```
+    
+    If you're doing repeatable builds, you probably don't want to update system or user environment variables and should stick to per process settings.
+    
+    The MinGW documentation is more cautious and suggests appending instead of prepending for compatibility. Prepending here is used to intentionally override any existing tools of the same name that may have come from other sources (e.g. Cmder, GitForWindows, etc.).
 
 3. Update the MSYS fstab file to contain the installation folder
 
-Edit the install location in the %MSYS_DIR%/etc/fstab file:
-```dos
-C:\users\me\where_ever_you_cloned_it   /mingw
-```
-
-TODO: Write a script to make this edit and add the fstab to the local .gitignore
+    Edit the install location in the %MSYS_DIR%/etc/fstab file:
+    ```dos
+    C:\users\me\where_ever_you_cloned_it   /mingw
+    ```
+    
+    TODO: Write a script to make this edit and add the fstab to the local .gitignore
 
 # Miscellaneous
 
