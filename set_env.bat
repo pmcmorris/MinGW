@@ -1,0 +1,5 @@
+@echo off
+set MINGWROOT=%PACKAGE_PATH%
+set MSYSROOT=%MINGWROOT%\msys\1.0
+set PATH=%MINGWROOT%\bin;%MSYSROOT%\bin;%PATH%
+
