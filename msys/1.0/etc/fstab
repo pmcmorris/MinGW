@@ -6,4 +6,4 @@
 
 # Win32_Path				Mount_Point
 #-------------------------------------	-----------
-C:/swdev/toolchain/MinGW/dev				/mingw
+C:/swdev/packages/MinGW/dev				/mingw
